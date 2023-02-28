@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .alert-box{
+            display:none;
+            position:relative;
+            padding:20px;
+            border-radius:8px;
+            color:#fff;
+            background:silver;
+        }
+        .close{
+            position:absolute;
+            right:20px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        </style>
+            
+
+    <div class="alert-box" id="alert">알림창<button onclick="alertToggle('none')" class="close">X</button></div>
+    <button onclick="alertToggle('block')">버튼</button>
+
+    <script>
+
+        //step1
+        // function alertOpen(){
+        //     document.getElementById('alert').style.display = 'block';
+        // }        
+
+        // function alertClose(){
+        //     document.getElementById('alert').style.display = 'none';
+        // }
+
+
+        function alertToggle(display){
+            document.getElementById('alert').style.display = display;
+        }
+
+    </script>
+
+
+</body>
+</html>
