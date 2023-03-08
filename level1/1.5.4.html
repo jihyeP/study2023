@@ -19,7 +19,7 @@
           <input type="text" class="form-control" id="email">
          </div>
          <div class="my-3">
-           <input type="password" class="form-control" id="password">
+           <input type="password" class="form-control">
          </div>
          <button type="submit" class="btn btn-primary" id="send">전송</button> <!-- 전송은 항상 submit !! -->
          <button type="button" class="btn btn-danger" id="close">닫기</button>
@@ -49,58 +49,40 @@
 
     <script>
 
-      //menu
       document.querySelector('.navbar-toggler').addEventListener('click', function(){
         document.querySelector('.list-group').classList.toggle('show');
-      });
+      })
 
-      //modal
       $('#login').on('click', function(){
         $('.black-bg').addClass('show-modal');
-      });
+      })
 
-      $('#close').on('click', function(){
-        $('.black-bg').removeClass('show-modal');
-      });
-     
-      
-      // //전송버튼 누르면
-      // $('form').on('submit', function(e){
-      //   if(document.getElementById('email').value == ''){
-      //     //알림창 띄우기
-      //     alert('아이디 입력안함.');
-      //     e.preventDefault(); //폼전송 막기
-      //   } //중괄호 세미콜론 생략가능
-      // }); //소괄호 세미콜론은 치는게 좋음
 
-      //과제
-      // 1. 전송버튼 누를 때 아이디랑 패스워드 둘 다 공백검사하려면?
-      // 2. 전송버튼 누를 때 입력한 비번이 6자 미만이면 알림띄우기
-
-      // $('form').on('submit', function(e){
-      //   if(document.getElementById('email').value == ''){
-      //     alert('아이디를 입력하세요.');
-      //     e.preventDefault(); //폼전송 막기
+      // 내가 한거
+      // document.querySelector('.btn-primary').addEventListener('click', function(){
+      //   if($('.form-control').val() == ''){
+      //     alert('공백입니다.');
+      //   } else{
+      //     alert('안 공백입니다.');
       //   }
-      //   if(document.getElementById('password').value == ''){
-      //     alert('비밀번호를 입력하세요.');
-      //     e.preventDefault(); //폼전송 막기
-      //   }
-      //   if(document.getElementById('password').length() < 6){
-      //     alert('짧아!');
-      //     e.preventDefault(); //폼전송 막기
-      //   }
-      // });
-
-      // document.getElementById('email').addEventListener('input', function(){
-      //   console.log('test');
       // })
       
-      // document.getElementById('email').addEventListener('change', function(){
-      //   console.log('test');
-      // })
-
+      //전송버튼 누르면
+      $('form').on('submit', function(e){
+        //input 값 공백이면
+        if(document.getElementById('email').value == ''){
+          //알림창 띄우기
+          alert('아이디 입력안함.');
+          e.preventDefault(); //폼전송 막기
+        } //중괄호 세미콜론 생략가능
+      }); //소괄호 세미콜론은 치는게 좋음
       
+
+      /*
+      if(조건){
+        실행할 코드
+      }
+      */
 
     </script>
 
