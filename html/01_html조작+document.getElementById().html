@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="hello">안녕하세요.</h1>
+    <h1 id="hi">JS 초보에요.</h1>
+
+    <script>
+        document.getElementById('hello').innerHTML = '안녕';
+        document.getElementById('hi').innerHTML = 'JS 고수에요.';
+
+        //Q. h1 폰트사이즈 16px로 줄이기
+        document.getElementById('hello').style.fontSize = '16px';
+    </script>
+
+    <!--
+
+    .getElementById() => 셀렉터
+    .innerHTML / .style / .color => 메소드 (함수)
+
+    -->
+    
+</body>
+</html>

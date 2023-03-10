@@ -15,19 +15,7 @@
     <div class="black-bg">
         <div class="white-bg">
             <h4>로그인하세요</h4>
-
-            <form action="success.html">
-                <div class="my-3">
-                    <label for="email">아이디 : </label>
-                  <input type="text" class="form-control" id="email">
-                 </div>
-                 <div class="my-3">
-                    <label for="password">비밀번호 : </label>
-                   <input type="password" class="form-control" id="password">
-                 </div>
-                 <button type="submit" class="btn btn-primary" id="btn-submit">전송</button>
-                 <button type="button" class="btn btn-danger" id="close">닫기</button>
-              </form>
+            <button class="btn btn-danger" id="close">닫기</button>
         </div>
     </div> 
 
@@ -48,11 +36,7 @@
         <li class="list-group-item">And a fifth one</li>
     </ul>
 
-    <div class="main-bg">
-        <h4>sale</h4>
-        <button type="button" class="btn btn-primary" id="btn-login">로그인</button>
-    </div>
-
+    <button type="button" class="btn btn-primary" id="btn-login">로그인</button>
 
     <script>
         
@@ -61,23 +45,25 @@
             document.getElementsByClassName('list-group')[0].classList.toggle('show');
         })
 
-        //모달창 open / close
+        //Q. 버튼 누르면 모달창 띄우기
         document.getElementById('btn-login').addEventListener('click', function(){
             document.querySelector('.black-bg').classList.add('show-modal');
+            // $('.black-bg').addClass('show-modal');
         })
+
         document.getElementById('close').addEventListener('click', function(){
             document.querySelector('.black-bg').classList.remove('show-modal');
         })
 
-        $('form').on('submit', function(e){
-            if(document.getElementById('#email').value == ''){
-                alert('아이디를 입력하세요.');
-                e.preventDefault();
-            }
-        });
+        // ***
+        // one-way UI 애니메이션 만드는 법
+        // 1. 시작스타일
+        // 2. 최종스타일
+        // 3. 원할 때 최종스타일로 변해!
+        // 4. transition 추가
+        // ***
 
-        //Q1. 전송버튼 누를 때 아이디랑 패스워드 둘 다 공백검사하려면?
-        //Q2. 전송버튼 누를 때 입력한 비번이 6자 미만이면 알림띄우기
+        //위에서 내려오기, 슬라이드업, 다운
         
     </script>
     

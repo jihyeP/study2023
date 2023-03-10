@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <div class="alert-box" id="alert">알림창임<button onclick="alertOpen('none')"> 닫기 </button></div>
+
+    <button onclick="alertId()" id="id"> 버튼1 </button>
+    <button onclick="alertPw()" id="pw"> 버튼2 </button>
+    
+
+    <script>
+
+        function alertOpen(type){
+            document.getElementById('alert').style.display = type;
+        }
+
+        //버튼1 : 아이디를 입력하세요.
+        function alertId(){
+            document.getElementById('alert').innerHTML = '아이디를 입력하세요.'
+            document.getElementById('alert').style.display = 'block';
+        }
+
+        //버튼2 : 비밀번호를 입력하세요.
+        function alertPw(){
+            document.getElementById('alert').innerHTML = '비밀번호를 입력하세요.'
+            document.getElementById('alert').style.display = 'block';
+        }
+            
+        
+    </script>
+    
+</body>
+</html>
